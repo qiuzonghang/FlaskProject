@@ -1,0 +1,20 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Aug 30 17:00:19 CST 2022","Tue Aug 30 17:00:21 CST 2022","1103","ApiTestCase","test_GWYC_api","TestCase","","","公务用车-无待办明细","
+            （无数据）获取待办审核明细、申请信息、审核日志，校验数据库
+        "
+"passed","Tue Aug 30 17:00:18 CST 2022","Tue Aug 30 17:00:19 CST 2022","928","ApiTestCase","test_GWYC_api","TestCase","","","公务用车-获取管理端工单列表","
+            校验管理端工单列表，依赖test_apply case 创建，验证数据库、test_apply工单号、排序等
+        "
+"passed","Tue Aug 30 17:00:21 CST 2022","Tue Aug 30 17:00:21 CST 2022","0","ApiTestCase","test_GWYC_api","TestCase","","","公务用车-我的待办保存明细",""
+"passed","Tue Aug 30 17:00:19 CST 2022","Tue Aug 30 17:00:19 CST 2022","286","ApiTestCase","test_GWYC_api","TestCase","","","公务用车-我的待办","
+            校验工单是否发送我的待办，验证待办数据+数据库数据+test_apply创建工单是否一致
+        "
+"passed","Tue Aug 30 17:00:17 CST 2022","Tue Aug 30 17:00:17 CST 2022","246","ApiTestCase","test_GWYC_api","TestCase","","","公务用车-获取user信息","
+            数据依赖，校验关键词结果
+        "
+"passed","Tue Aug 30 17:00:17 CST 2022","Tue Aug 30 17:00:17 CST 2022","333","ApiTestCase","test_GWYC_api","TestCase","","","公务用车-发起工单","
+            校验新增公务用车，依赖 test_user_info case信息
+        "
+"passed","Tue Aug 30 17:00:17 CST 2022","Tue Aug 30 17:00:18 CST 2022","759","ApiTestCase","test_GWYC_api","TestCase","","","公务用车-check邮件","
+            校验新增公务用车后是否会发送邮件，依赖 test_apply case 创建，发送邮件会有延迟，验证时会有60s等待时间
+        "

@@ -41,5 +41,10 @@ def register():
     return render_template("register.html")
 
 
+@app.route('/report')
+def report():
+    return render_template("/html/index.html")
+
+
 if __name__ == '__main__':
     app.run()

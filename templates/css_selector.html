@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>css 选择器</title>
+    <style>
+        /*ID选择器*/
+        #c1{
+            color: chartreuse;
+            height: 50px;
+        }
+        /*class类选择器*/
+        .c2{
+            color: red;
+            height: 50px;
+        }
+        /*标签选择器*/
+        li{
+            color: palevioletred;
+        }
+        /*属性选择器*/
+        input[type="text"]{
+            border: 1px solid red;
+        }
+        .v1[xx="000"]{
+            color: rosybrown;
+        }
+        /*后代选择器*/
+        .xy li{
+            color: #51a7e8;
+        }
+        .xy > a{
+            color: royalblue;
+        }
+    </style>
+
+
+</head>
+<body>
+<h1 style="color: #343434;height: 75px">CSS 选择器练习</h1>
+    <div id="c1">
+        ID选择器
+    </div>
+    <div class="c2">
+        class类选择器
+    </div>
+    <ui>
+        <li>China</li>
+        <li>USA</li>
+        <li>England</li>
+    </ui>
+
+    <input type="text">
+    <input type="password">
+    <div class="v1" xx="123">联通</div>
+    <div class="v1" xx="456">电信</div>
+    <div class="v1" xx="000">移动</div>
+
+    <div class="xy">
+        <a>百度</a>
+        <div>
+            <a>谷歌</a>
+        </div>
+        <ui>
+            <li>美国</li>
+            <li>日本</li>
+            <li>韩国</li>
+        </ui>
+    </div>
+
+</body>
+</html>

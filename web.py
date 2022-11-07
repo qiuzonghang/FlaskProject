@@ -3,7 +3,8 @@
 # @Author : qiuzonghang
 # @File   : web.py
 
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+from common import function as func
 
 app = Flask(__name__)
 
@@ -31,19 +32,32 @@ def user_list():
     return render_template("user_list.html")
 
 
-@app.route('/login/input')
-def login_input():
-    return render_template("login_input.html")
+@app.route('/login', methods=["GET", "POST"])
+def login():
+    if request.method == "GET":
+        return render_template("login_input.html")
+    else:
+        return "登录成功！\n欢迎 %s" % request.form.get("username")
 
 
-@app.route('/register')
+@app.route('/register', methods=["GET", "POST"])
 def register():
-    return render_template("register.html")
+    if request.method == "GET":
+        return render_template("register.html")
+    else:
+        print(request.form)
+        return render_template("success_register.html")
 
 
 @app.route('/report')
 def report():
     return render_template("/html/index.html")
+
+
+# @app.route('/do/login', methods=["GET"])
+# def do_login():
+#     print(request.args)
+#     return "登录成功！"
 
 
 if __name__ == '__main__':

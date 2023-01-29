@@ -12,7 +12,6 @@ app = Flask(__name__)
 # 创建网址/show/info和方法index的对应关系，访问/show/info执行index方法
 @app.route("/index")
 def index():
-    # return "中国联通"
     # 读取文件内容并返回,默认取templates目录找
     return render_template('index.html')
 
@@ -37,7 +36,7 @@ def login():
     if request.method == "GET":
         return render_template("login_input.html")
     else:
-        return "登录成功！\n欢迎 %s" % request.form.get("username")
+        return "登录成功！\n欢迎 %s！" % request.form.get("username")
 
 
 @app.route('/register', methods=["GET", "POST"])
